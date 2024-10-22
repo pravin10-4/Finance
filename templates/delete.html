@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+C$50 Finance: Delete Account
+{% endblock %}
+
+{% block main %}
+<div class="card">
+    <h5 class="card-header">Delete Account</h5>
+    <div class="card-body">
+      <h5 class="card-title">Do you want to delete your account?</h5>
+      <form action="/delete" method="post">
+        <button class="btn btn-primary" type="submit">Delete</button>
+        <a href="/" class="btn btn-light">Cancel</a>
+      </form>
+    </div>
+  </div>
+{% endblock %}

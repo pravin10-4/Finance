@@ -1,0 +1,10 @@
+{%extends "layout.html" %}
+
+{% block title %}
+    C$50 Finance: Quoted
+{% endblock %}
+
+
+{% block main %}
+    <p>A share of {{stock.name}} ({{stock.symbol}}) costs {{stock.price | usd}}.</p>
+{% endblock %}

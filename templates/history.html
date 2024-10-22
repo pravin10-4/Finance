@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+C$50 Finance: History
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped table-sm">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-start">Name</th>
+            <th class="text-start">Shares</th>
+            <th class="text-start">Price</th>
+            <th class="text-end">Status</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions %}
+            <tr>
+                <td class="text-start">{{transaction["symbol"]}}</td>
+                <td class="text-start">{{transaction["name"]}}</td>
+                <td class="text-start">{{transaction["shares"]}}</td>
+                <td class="text-start">{{transaction["price"]}}</td>
+                <td class="text-end">{{transaction["status"]}}</td>
+                <td class="text-end">{{transaction["date"]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
